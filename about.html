@@ -25,6 +25,7 @@
     <!-- Global Header -->
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <div class="container-fluid px-4 px-lg-5">
+            <!-- Logo + Title + Subtitle -->
             <a class="navbar-brand" href="index.html">
                 <div class="brand-logo-icon">
                     <img src="assets/logo.png" alt="Perfume Atelier Logo">
@@ -58,8 +59,6 @@
                     <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
                         <button id="theme-toggle" class="btn btn-link text-secondary-custom p-1"><i
                                 class="bi bi-moon-stars-fill fs-5"></i></button>
-                        <a href="dashboard.html" class="btn btn-outline-custom border-0 ms-1 px-3"><i
-                                class="bi bi-grid-fill"></i> Admin</a>
                         <div class="vr mx-2 d-none d-lg-block text-secondary-custom"></div>
                         <a href="login.html" class="btn btn-outline-custom btn-sm">Log In</a>
                         <a href="register.html" class="btn btn-primary-custom btn-sm">Sign Up</a>
@@ -83,8 +82,7 @@
         <div class="container">
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://placehold.co/600x400/5A2F3C/FAF9F6?text=The+Process" alt="Perfume Making"
-                        class="img-fluid rounded shadow">
+                    <img src="assets/images/about-process.png" alt="Perfume Making" class="img-fluid rounded shadow-lg">
                 </div>
                 <div class="col-lg-6 ps-lg-5">
                     <h2 class="mb-3">The Art of Blending</h2>
@@ -102,8 +100,8 @@
 
             <div class="row align-items-center flex-row-reverse mt-5">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://placehold.co/600x400/D97C96/fff?text=Ingredients" alt="Ingredients"
-                        class="img-fluid rounded shadow">
+                    <img src="assets/images/about-ingredients.png" alt="Ingredients"
+                        class="img-fluid rounded shadow-lg">
                 </div>
                 <div class="col-lg-6 pe-lg-5">
                     <h2 class="mb-3">Sourced by Hand</h2>
@@ -129,10 +127,12 @@
             <h2 class="mb-5">Meet the Nose</h2>
             <div class="row justify-content-center">
                 <div class="col-md-4">
-                    <div class="card card-custom border-0 p-3 h-100">
-                        <img src="https://placehold.co/300x300/2F151D/FAF9F6?text=Elena"
-                            class="card-img-top rounded-circle mx-auto mt-3"
-                            style="width: 150px; height: 150px; object-fit: cover;" alt="Founder">
+                    <div class="card card-custom border-0 bg-transparent">
+                        <div class="mx-auto mb-4"
+                            style="width: 200px; height: 200px; overflow: hidden; border-radius: 50%;">
+                            <img src="assets/images/about-founder.png" alt="Founder" class="img-fluid"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
                         <div class="card-body">
                             <h4 class="card-title mb-1">Elena Vance</h4>
                             <p class="text-primary-custom small text-uppercase mb-3">Master Perfumer</p>
@@ -193,7 +193,15 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <h3 class="h4 mb-4 text-white font-heading">Perfume Atelier</h3>
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="brand-logo-icon" style="width: 48px; height: 48px;">
+                            <img src="assets/logo.png" alt="Perfume Atelier Logo">
+                        </div>
+                        <div class="d-flex flex-column lh-1">
+                            <span class="font-heading fw-bold fs-4 text-white">Perfume</span>
+                            <span class="text-uppercase small text-white-50 ls-2">Atelier</span>
+                        </div>
+                    </div>
                     <p class="text-white-50 small mb-4">A sanctuary of scent, dedicated to the art of fine fragrance and
                         personal expression. Handcrafted in our studio.</p>
                 </div>

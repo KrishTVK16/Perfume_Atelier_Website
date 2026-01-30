@@ -26,6 +26,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <div class="container-fluid px-4 px-lg-5">
             <!-- Logo + Title + Subtitle -->
+            <!-- Logo + Title + Subtitle -->
             <a class="navbar-brand" href="index.html">
                 <div class="brand-logo-icon">
                     <img src="assets/logo.png" alt="Perfume Atelier Logo">
@@ -70,11 +71,6 @@
                             <i class="bi bi-moon-stars-fill fs-5"></i>
                         </button>
 
-                        <!-- Dashboard Link -->
-                        <a href="dashboard.html" class="btn btn-outline-custom border-0 ms-1 px-3">
-                            <i class="bi bi-grid-fill"></i> Admin
-                        </a>
-
                         <div class="vr mx-2 d-none d-lg-block text-secondary-custom"></div>
 
                         <a href="login.html" class="btn btn-outline-custom btn-sm">Log In</a>
@@ -103,7 +99,7 @@
                 </div>
                 <!-- Placeholder for image if needed, or keeping it clean text-first -->
                 <div class="col-lg-6 d-none d-lg-block text-center">
-                    <img src="https://placehold.co/500x600/5A2F3C/FAF9F6?text=Perfume+Atelier" alt="Perfume Bottle"
+                    <img src="assets/images/hero-main.png" alt="Perfume Atelier Workshop"
                         class="img-fluid rounded shadow-lg" style="max-height: 500px;">
                 </div>
             </div>
@@ -126,8 +122,7 @@
                 <div class="col-md-4">
                     <div class="card card-custom border-0 h-100 text-center p-4">
                         <div class="position-relative mb-4">
-                            <img src="https://placehold.co/300x400/2F151D/FAF9F6?text=No.+1"
-                                class="img-fluid rounded shadow-sm" alt="Perfume No. 1">
+                            <img src="assets/images/product-1.png" alt="No. 1" class="img-fluid rounded shadow-sm">
                             <span
                                 class="position-absolute top-0 start-50 translate-middle-x badge bg-white text-secondary-custom shadow-sm mt-3 border">Signature</span>
                         </div>
@@ -146,8 +141,7 @@
                 <div class="col-md-4">
                     <div class="card card-custom border-0 h-100 text-center p-4">
                         <div class="position-relative mb-4">
-                            <img src="https://placehold.co/300x400/D97C96/fff?text=No.+5"
-                                class="img-fluid rounded shadow-sm" alt="Perfume No. 5">
+                            <img src="assets/images/product-5.png" alt="No. 5" class="img-fluid rounded shadow-sm">
                         </div>
                         <h4 class="font-heading mb-1">No. 5 Rose de Mai</h4>
                         <div class="text-primary-custom small text-uppercase mb-3">Floral / Fresh</div>
@@ -164,8 +158,7 @@
                 <div class="col-md-4">
                     <div class="card card-custom border-0 h-100 text-center p-4">
                         <div class="position-relative mb-4">
-                            <img src="https://placehold.co/300x400/5A2F3C/fff?text=No.+9"
-                                class="img-fluid rounded shadow-sm" alt="Perfume No. 9">
+                            <img src="assets/images/product-9.png" alt="No. 9" class="img-fluid rounded shadow-sm">
                             <span
                                 class="position-absolute top-0 start-50 translate-middle-x badge bg-secondary text-white shadow-sm mt-3">Rare
                                 Allocation</span>
@@ -240,9 +233,9 @@
         </div>
     </section>
 
-    <!-- Olfactory Families (New Section) -->
-    <section class="section-padding bg-light">
-        <div class="container">
+    <!-- Olfactory Families (Categories) -->
+    <section class="section-padding" style="background: linear-gradient(to bottom, #fff, #f8f5f2);">
+        <div class="container text-center">
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6">
                     <h2 class="display-6 font-heading mb-3">The Olfactory Families</h2>
@@ -300,7 +293,15 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <h3 class="h4 mb-4 text-white font-heading">Perfume Atelier</h3>
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="brand-logo-icon" style="width: 48px; height: 48px;">
+                            <img src="assets/logo.png" alt="Perfume Atelier Logo">
+                        </div>
+                        <div class="d-flex flex-column lh-1">
+                            <span class="font-heading fw-bold fs-4 text-white">Perfume</span>
+                            <span class="text-uppercase small text-white-50 ls-2">Atelier</span>
+                        </div>
+                    </div>
                     <p class="text-white-50 small mb-4">A sanctuary of scent, dedicated to the art of fine fragrance and
                         personal expression. Handcrafted in our studio.</p>
                     <div class="d-flex gap-3">

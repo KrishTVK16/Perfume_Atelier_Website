@@ -89,11 +89,6 @@
                             <i class="bi bi-moon-stars-fill fs-5"></i>
                         </button>
 
-                        <!-- Dashboard Link -->
-                        <a href="dashboard.html" class="btn btn-outline-custom border-0 ms-1 px-3">
-                            <i class="bi bi-grid-fill"></i> Admin
-                        </a>
-
                         <div class="vr mx-2 d-none d-lg-block text-secondary-custom"></div>
 
                         <a href="login.html" class="btn btn-outline-custom btn-sm">Log In</a>
@@ -108,8 +103,7 @@
     <section class="container-fluid p-0 hero-split d-flex align-items-center position-relative">
         <div class="row g-0 w-100 h-100">
             <div class="col-lg-6 order-lg-2 h-100 position-relative">
-                <img src="https://placehold.co/800x1200/5A2F3C/FAF9F6?text=Essence" alt="Hero"
-                    class="hero-img d-none d-lg-block header-blur-fix" style="min-height: 100vh;">
+                <img src="assets/images/hero-editorial.png" alt="Hero" class="img-fluid w-100 h-100 object-fit-cover">
                 <!-- Mobile Only Image -->
                 <img src="https://placehold.co/600x400/5A2F3C/FAF9F6?text=Essence" alt="Hero"
                     class="img-fluid d-lg-none w-100 mt-5 pt-5">
@@ -132,7 +126,7 @@
     </section>
 
     <!-- Manifest Section -->
-    <section id="content" class="section-padding bg-light">
+    <section id="content" class="section-padding" style="background: linear-gradient(to bottom, #FAF9F6, #f4e4e9);">
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8">
@@ -154,10 +148,10 @@
     <!-- Masterpiece Spotlight (New Section) -->
     <section class="section-padding py-0">
         <div class="container-fluid p-0">
-            <div class="row g-0 align-items-center bg-dark text-white">
+            <div class="row g-0 align-items-center text-white"
+                style="background: linear-gradient(135deg, #1a1a1a 0%, #2F151D 100%);">
                 <div class="col-lg-6">
-                    <img src="https://placehold.co/800x800/2F151D/FAF9F6?text=L'Heure+D'Or" class="img-fluid w-100"
-                        alt="Masterpiece">
+                    <img src="assets/images/masterpiece-gold.png" class="img-fluid w-100" alt="Masterpiece">
                 </div>
                 <div class="col-lg-6 p-5">
                     <div class="p-lg-5">
@@ -274,24 +268,27 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <a href="blog-details.html" class="text-decoration-none">
-                        <img src="https://placehold.co/400x500/D97C96/fff?text=Rose" class="img-fluid mb-3 w-100"
-                            alt="Post">
+                        <div class="card-img-wrapper overflow-hidden">
+                            <img src="assets/images/collection-flora.png" class="card-img-top" alt="Flora">
+                        </div>
                         <span class="text-uppercase small text-muted letter-spacing-1">Process</span>
                         <h4 class="font-heading text-secondary-custom mt-2">Harvesting Dawn Roses</h4>
                     </a>
                 </div>
                 <div class="col-md-4">
                     <a href="blog-details.html" class="text-decoration-none">
-                        <img src="https://placehold.co/400x500/5A2F3C/fff?text=Oud" class="img-fluid mb-3 w-100"
-                            alt="Post">
+                        <div class="card-img-wrapper overflow-hidden">
+                            <img src="assets/images/product-9.png" class="card-img-top" alt="Experimental">
+                        </div>
                         <span class="text-uppercase small text-muted letter-spacing-1">Ingredients</span>
                         <h4 class="font-heading text-secondary-custom mt-2">The Mystery of Oud</h4>
                     </a>
                 </div>
                 <div class="col-md-4">
                     <a href="blog-details.html" class="text-decoration-none">
-                        <img src="https://placehold.co/400x500/2F151D/FAF9F6?text=Lab" class="img-fluid mb-3 w-100"
-                            alt="Post">
+                        <div class="card-img-wrapper overflow-hidden">
+                            <img src="assets/images/product-5.png" class="card-img-top" alt="Noir">
+                        </div>
                         <span class="text-uppercase small text-muted letter-spacing-1">Studio</span>
                         <h4 class="font-heading text-secondary-custom mt-2">Inside the Lab</h4>
                     </a>
@@ -305,7 +302,15 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <h3 class="h4 mb-4 text-white font-heading">Perfume Atelier</h3>
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="brand-logo-icon" style="width: 48px; height: 48px;">
+                            <img src="assets/logo.png" alt="Perfume Atelier Logo">
+                        </div>
+                        <div class="d-flex flex-column lh-1">
+                            <span class="font-heading fw-bold fs-4 text-white">Perfume</span>
+                            <span class="text-uppercase small text-white-50 ls-2">Atelier</span>
+                        </div>
+                    </div>
                     <p class="text-white-50 small mb-4">A sanctuary of scent, dedicated to the art of fine fragrance and
                         personal expression. Handcrafted in our studio.</p>
                     <div class="d-flex gap-3">

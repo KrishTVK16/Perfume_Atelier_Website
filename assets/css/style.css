@@ -224,7 +224,11 @@ a:hover {
     font-weight: 500;
 }
 
-/* [data-theme="dark"] .brand-logo-icon {} - Removed as not needed for image */
+/* [data-theme="dark"] .brand-logo-icon {} */
+[data-theme="dark"] .navbar-brand img {
+    filter: invert(1) brightness(100%);
+    /* Invert black logo to white for dark mode */
+}
 
 [data-theme="dark"] .navbar-brand-text {
     color: var(--primary-color);
@@ -233,6 +237,11 @@ a:hover {
 [data-theme="dark"] .brand-subtitle {
     color: #fff;
     opacity: 0.8;
+}
+
+[data-theme="dark"] .brand-text {
+    color: #FAF9F6 !important;
+    /* Ensure logo text is white in dark mode */
 }
 
 .nav-link-custom {
@@ -245,6 +254,31 @@ a:hover {
 .nav-link-custom:hover,
 .nav-link-custom.active {
     color: var(--primary-color);
+    text-shadow: 0 0 15px rgba(217, 124, 150, 0.4);
+    /* Soft blush glow */
+}
+
+.nav-link-custom.active::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 1rem;
+    /* Match margin-left of text */
+    right: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    width: calc(100% - 1rem);
+    /* Adjust width to match text */
+    box-shadow: 0 0 10px rgba(217, 124, 150, 0.6);
+    /* Glow on the underline */
+}
+
+[data-theme="dark"] .nav-link-custom.active {
+    color: var(--primary-color) !important;
+    /* Active menu color for dark mode */
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(217, 124, 150, 0.8);
+    /* Stronger glow in dark mode */
 }
 
 /* --- Footer --- */
@@ -271,6 +305,21 @@ a:hover {
 
 .footer-custom a:hover {
     color: var(--primary-color);
+}
+
+[data-theme="dark"] .footer-custom {
+    color: #FAF9F6 !important;
+    /* Force white text in footer for dark mode */
+    background-color: #150a0d !important;
+    /* Even darker background for contrast */
+}
+
+[data-theme="dark"] .footer-custom a {
+    color: rgba(250, 249, 246, 0.8) !important;
+}
+
+[data-theme="dark"] .footer-custom h5 {
+    color: var(--primary-color) !important;
 }
 
 /* --- Utility / Decor --- */
@@ -309,6 +358,24 @@ a:hover {
 .card-custom:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(90, 47, 60, 0.1);
+}
+
+.location-card {
+    transition: all 0.4s ease;
+    border: 1px solid transparent;
+}
+
+.location-card:hover {
+    background-color: var(--body-bg);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 40px rgba(217, 124, 150, 0.15);
+    /* Blush glow shadow */
+    transform: translateY(-5px) scale(1.02);
+}
+
+.location-card:hover .text-primary-custom {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 /* --- Dashboard Specifics --- */

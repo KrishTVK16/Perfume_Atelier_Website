@@ -25,6 +25,7 @@
     <!-- Global Header -->
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <div class="container-fluid px-4 px-lg-5">
+            <!-- Logo + Title + Subtitle -->
             <a class="navbar-brand" href="index.html">
                 <div class="brand-logo-icon">
                     <img src="assets/logo.png" alt="Perfume Atelier Logo">
@@ -57,8 +58,6 @@
                     <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
                         <button id="theme-toggle" class="btn btn-link text-secondary-custom p-1"><i
                                 class="bi bi-moon-stars-fill fs-5"></i></button>
-                        <a href="dashboard.html" class="btn btn-outline-custom border-0 ms-1 px-3"><i
-                                class="bi bi-grid-fill"></i> Admin</a>
                         <div class="vr mx-2 d-none d-lg-block text-secondary-custom"></div>
                         <a href="login.html" class="btn btn-outline-custom btn-sm">Log In</a>
                         <a href="register.html" class="btn btn-primary-custom btn-sm">Sign Up</a>
@@ -84,8 +83,8 @@
                 <!-- Service 1 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card card-custom h-100 border-0 overflow-hidden">
-                        <img src="https://placehold.co/400x250/5A2F3C/FAF9F6?text=Bespoke" class="card-img-top"
-                            alt="Bespoke">
+                        <img src="assets/images/service-custom.png" class="card-img-top" alt="Bespoke Creation"
+                            style="height: 250px; object-fit: cover;">
                         <div class="card-body p-4">
                             <h4 class="card-title fw-bold font-heading mb-3">Bespoke Blending</h4>
                             <p class="card-text text-muted mb-4">A 2-hour private consultation to create your unique
@@ -97,8 +96,8 @@
                 <!-- Service 2 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card card-custom h-100 border-0 overflow-hidden">
-                        <img src="https://placehold.co/400x250/D97C96/fff?text=Workshops" class="card-img-top"
-                            alt="Workshops">
+                        <img src="assets/images/service-workshops.png" class="card-img-top" alt="Workshops"
+                            style="height: 250px; object-fit: cover;">
                         <div class="card-body p-4">
                             <h4 class="card-title fw-bold font-heading mb-3">Group Workshops</h4>
                             <p class="card-text text-muted mb-4">Perfect for birthdays or bridal showers. Learn the
@@ -110,8 +109,8 @@
                 <!-- Service 3 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card card-custom h-100 border-0 overflow-hidden">
-                        <img src="https://placehold.co/400x250/2F151D/FAF9F6?text=Wedding" class="card-img-top"
-                            alt="Wedding">
+                        <img src="assets/images/service-wedding.png" class="card-img-top" alt="Wedding Scenting"
+                            style="height: 250px; object-fit: cover;">
                         <div class="card-body p-4">
                             <h4 class="card-title fw-bold font-heading mb-3">Wedding Scenting</h4>
                             <p class="card-text text-muted mb-4">Design a scent for your special day. Includes room
@@ -301,7 +300,15 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <h3 class="h4 mb-4 text-white font-heading">Perfume Atelier</h3>
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="brand-logo-icon" style="width: 48px; height: 48px;">
+                            <img src="assets/logo.png" alt="Perfume Atelier Logo">
+                        </div>
+                        <div class="d-flex flex-column lh-1">
+                            <span class="font-heading fw-bold fs-4 text-white">Perfume</span>
+                            <span class="text-uppercase small text-white-50 ls-2">Atelier</span>
+                        </div>
+                    </div>
                     <p class="text-white-50 small mb-4">A sanctuary of scent, dedicated to the art of fine fragrance and
                         personal expression.</p>
                 </div>
