@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit (Contact) | Perfume Atelier</title>
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Global Header -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <div class="brand-logo-icon">
+                    <img src="assets/logo.png" alt="Perfume Atelier Logo">
+                </div>
+                <div class="brand-text-group">
+                    <span class="navbar-brand-text">Perfume</span>
+                    <span class="brand-subtitle">Atelier</span>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title font-heading">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Maison</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Story</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">Atelier</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Experiences</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="pricing.html">Reserve</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Journal</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom active" href="contact.html">Visit</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                        <button id="theme-toggle" class="btn btn-link text-secondary-custom p-1"><i
+                                class="bi bi-moon-stars-fill fs-5"></i></button>
+                        <a href="dashboard.html" class="btn btn-outline-custom border-0 ms-1 px-3"><i
+                                class="bi bi-grid-fill"></i> Admin</a>
+                        <div class="vr mx-2 d-none d-lg-block text-secondary-custom"></div>
+                        <a href="login.html" class="btn btn-outline-custom btn-sm">Log In</a>
+                        <a href="register.html" class="btn btn-primary-custom btn-sm">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="py-5 bg-light text-center border-bottom">
+        <div class="container py-4">
+            <h1 class="display-4 mb-3">Visit the Atelier</h1>
+            <p class="lead text-muted mx-auto" style="max-width: 600px;">We invite you to experience our scents in
+                person. Book an appointment or simply drop by to say hello.</p>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <h3 class="font-heading mb-4">Send a Message</h3>
+                    <form action="#">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label small text-uppercase">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label small text-uppercase">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="email@address.com">
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label small text-uppercase">Subject</label>
+                                <select class="form-select" id="subject">
+                                    <option selected>General Inquiry</option>
+                                    <option>Book a Workshop</option>
+                                    <option>Private Consultation</option>
+                                    <option>Press / Collaboration</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label small text-uppercase">Message</label>
+                                <textarea class="form-control" id="message" rows="5"
+                                    placeholder="How can we help you?"></textarea>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-primary-custom w-100 py-3">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Info & Map -->
+                <div class="col-lg-6">
+                    <div class="ps-lg-5">
+                        <h3 class="font-heading mb-4">Studio Location</h3>
+
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 text-primary-custom">
+                                <i class="bi bi-geo-alt fs-4"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="fw-bold mb-1">Address</h6>
+                                <p class="text-muted mb-0">123 Artisan Avenue, Creative District<br>New York, NY 10012
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 text-primary-custom">
+                                <i class="bi bi-clock fs-4"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="fw-bold mb-1">Hours</h6>
+                                <p class="text-muted mb-0">Tue - Sat: 11:00 AM - 7:00 PM<br>Sun - Mon: By Appointment
+                                    Only</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-5">
+                            <div class="flex-shrink-0 text-primary-custom">
+                                <i class="bi bi-envelope fs-4"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="fw-bold mb-1">Contact</h6>
+                                <p class="text-muted mb-0">hello@perfumeatelier.com<br>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+
+                        <!-- Map Placeholder -->
+                        <div class="bg-light rounded overflow-hidden shadow-sm"
+                            style="min-height: 300px; position: relative;">
+                            <!-- Actual Map iframe would go here. Using image/placeholder for template clarity -->
+                            <img src="https://placehold.co/600x300/e9ecef/adb5bd?text=Map+Location" alt="Map"
+                                class="w-100 h-100 object-fit-cover" style="position: absolute; top: 0; left: 0;">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="h4 mb-4 text-white font-heading">Perfume Atelier</h3>
+                    <p class="text-white-50 small mb-4">A sanctuary of scent, dedicated to the art of fine fragrance and
+                        personal expression.</p>
+                </div>
+                <!-- ... (Simplified Footer) ... -->
+                <div class="col-lg-2 col-md-6">
+                    <h5>Discover</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none small">Maison</a></li>
+                        <li class="mb-2"><a href="home-2.html" class="text-decoration-none small">Story</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none small">Atelier</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none small">Experiences</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Connect</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="pricing.html" class="text-decoration-none small">Reserve</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-decoration-none small">Journal</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none small">Visit</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none small">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Newsletter</h5>
+                    <form action="#" class="d-flex gap-2">
+                        <input type="email" class="form-control form-control-sm border-0" placeholder="Email Address">
+                        <button class="btn btn-primary-custom btn-sm" type="button">Join</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary my-4 opacity-25">
+            <div class="text-center text-white-50 small">&copy; 2026 Perfume Atelier. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

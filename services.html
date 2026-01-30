@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiences (Services) | Perfume Atelier</title>
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Global Header -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <div class="brand-logo-icon">
+                    <img src="assets/logo.png" alt="Perfume Atelier Logo">
+                </div>
+                <div class="brand-text-group">
+                    <span class="navbar-brand-text">Perfume</span>
+                    <span class="brand-subtitle">Atelier</span>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title font-heading">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Maison</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Story</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">Atelier</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom active"
+                                href="services.html">Experiences</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="pricing.html">Reserve</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Journal</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Visit</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                        <button id="theme-toggle" class="btn btn-link text-secondary-custom p-1"><i
+                                class="bi bi-moon-stars-fill fs-5"></i></button>
+                        <a href="dashboard.html" class="btn btn-outline-custom border-0 ms-1 px-3"><i
+                                class="bi bi-grid-fill"></i> Admin</a>
+                        <div class="vr mx-2 d-none d-lg-block text-secondary-custom"></div>
+                        <a href="login.html" class="btn btn-outline-custom btn-sm">Log In</a>
+                        <a href="register.html" class="btn btn-primary-custom btn-sm">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="py-5 bg-light text-center border-bottom">
+        <div class="container py-4">
+            <h1 class="display-4 mb-3">Our Services</h1>
+            <p class="lead text-muted mx-auto" style="max-width: 600px;">Explore our range of olfactory experiences,
+                from custom creations to educational workshops.</p>
+        </div>
+    </header>
+
+    <!-- Services Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-custom h-100 border-0 overflow-hidden">
+                        <img src="https://placehold.co/400x250/5A2F3C/FAF9F6?text=Bespoke" class="card-img-top"
+                            alt="Bespoke">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold font-heading mb-3">Bespoke Blending</h4>
+                            <p class="card-text text-muted mb-4">A 2-hour private consultation to create your unique
+                                signature scent from our library of 500+ essences.</p>
+                            <a href="service-details.html" class="btn btn-outline-custom w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-custom h-100 border-0 overflow-hidden">
+                        <img src="https://placehold.co/400x250/D97C96/fff?text=Workshops" class="card-img-top"
+                            alt="Workshops">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold font-heading mb-3">Group Workshops</h4>
+                            <p class="card-text text-muted mb-4">Perfect for birthdays or bridal showers. Learn the
+                                basics of perfumery and leave with a 15ml bottle.</p>
+                            <a href="service-details.html" class="btn btn-outline-custom w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-custom h-100 border-0 overflow-hidden">
+                        <img src="https://placehold.co/400x250/2F151D/FAF9F6?text=Wedding" class="card-img-top"
+                            alt="Wedding">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold font-heading mb-3">Wedding Scenting</h4>
+                            <p class="card-text text-muted mb-4">Design a scent for your special day. Includes room
+                                fragrance and favors for your guests.</p>
+                            <a href="service-details.html" class="btn btn-outline-custom w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-custom h-100 border-0 overflow-hidden">
+                        <img src="https://placehold.co/400x250/5A2F3C/fff?text=Consultation" class="card-img-top"
+                            alt="Consultation">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold font-heading mb-3">Brand Consultation</h4>
+                            <p class="card-text text-muted mb-4">For businesses looking to create an olfactory logo or
+                                signature ambient scent.</p>
+                            <a href="service-details.html" class="btn btn-outline-custom w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-custom h-100 border-0 overflow-hidden">
+                        <img src="https://placehold.co/400x250/D97C96/2F151D?text=Refill" class="card-img-top"
+                            alt="Refill">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold font-heading mb-3">Refill Service</h4>
+                            <p class="card-text text-muted mb-4">Bring in your empty Atelier bottles for a refill and
+                                receive a sustainability discount.</p>
+                            <a href="service-details.html" class="btn btn-outline-custom w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-custom h-100 border-0 overflow-hidden">
+                        <img src="https://placehold.co/400x250/2F151D/D97C96?text=Discovery" class="card-img-top"
+                            alt="Discovery">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold font-heading mb-3">Discovery Sessions</h4>
+                            <p class="card-text text-muted mb-4">A 30-minute introductory session to explore our house
+                                blends and find your match.</p>
+                            <a href="service-details.html" class="btn btn-outline-custom w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Process (New Section) -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-uppercase text-muted small letter-spacing-1">How It Works</span>
+                <h2 class="display-6 mt-2 mb-3">The Bespoke Journey</h2>
+                <div class="mx-auto" style="width: 50px; height: 2px; background-color: var(--secondary-color);"></div>
+            </div>
+
+            <div class="row g-4 position-relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="d-none d-lg-block position-absolute start-0 w-100 top-50 translate-middle-y border-top border-secondary opacity-25"
+                    style="z-index: 0;"></div>
+
+                <!-- Step 1 -->
+                <div class="col-lg-3 col-md-6 position-relative" style="z-index: 1;">
+                    <div class="card card-custom border-0 text-center h-100 py-4">
+                        <div class="bg-white rounded-circle shadow-sm mx-auto mb-3 d-flex align-items-center justify-content-center"
+                            style="width: 60px; height: 60px;">
+                            <span class="font-heading fw-bold fs-4 text-primary-custom">01</span>
+                        </div>
+                        <h5 class="fw-bold">Consultation</h5>
+                        <p class="small text-muted mb-0 px-2">We explore your olfactory memories and preferences.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="col-lg-3 col-md-6 position-relative" style="z-index: 1;">
+                    <div class="card card-custom border-0 text-center h-100 py-4">
+                        <div class="bg-white rounded-circle shadow-sm mx-auto mb-3 d-flex align-items-center justify-content-center"
+                            style="width: 60px; height: 60px;">
+                            <span class="font-heading fw-bold fs-4 text-primary-custom">02</span>
+                        </div>
+                        <h5 class="fw-bold">Selection</h5>
+                        <p class="small text-muted mb-0 px-2">Choose from over 500 rare essences and accords.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="col-lg-3 col-md-6 position-relative" style="z-index: 1;">
+                    <div class="card card-custom border-0 text-center h-100 py-4">
+                        <div class="bg-white rounded-circle shadow-sm mx-auto mb-3 d-flex align-items-center justify-content-center"
+                            style="width: 60px; height: 60px;">
+                            <span class="font-heading fw-bold fs-4 text-primary-custom">03</span>
+                        </div>
+                        <h5 class="fw-bold">Blending</h5>
+                        <p class="small text-muted mb-0 px-2">Our nose refines the formula until it is perfectly yours.
+                        </p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="col-lg-3 col-md-6 position-relative" style="z-index: 1;">
+                    <div class="card card-custom border-0 text-center h-100 py-4">
+                        <div class="bg-white rounded-circle shadow-sm mx-auto mb-3 d-flex align-items-center justify-content-center"
+                            style="width: 60px; height: 60px;">
+                            <span class="font-heading fw-bold fs-4 text-primary-custom">04</span>
+                        </div>
+                        <h5 class="fw-bold">Maceration</h5>
+                        <p class="small text-muted mb-0 px-2">The perfume rests for 4 weeks before final bottling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (New Section) -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="text-center mb-5">
+                        <h2 class="display-6 font-heading mb-3">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="accordion accordion-flush" id="accordionFAQ">
+                        <div class="accordion-item border-bottom">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed bg-transparent shadow-none fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                    aria-expanded="false" aria-controls="flush-collapseOne">
+                                    Do you ship internationally?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted small">Yes, we ship to over 50 countries. Please
+                                    note that alcohol-based perfumes require special dangerous goods shipping, which may
+                                    incur higher fees.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-bottom">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed bg-transparent shadow-none fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                    aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    How long does a bespoke workshop last?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted small">Group workshops typically last 2 hours.
+                                    Private bespoke sessions can take up to 4 hours depending on the complexity of the
+                                    project.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-bottom">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed bg-transparent shadow-none fw-bold"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Are your ingredients natural?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted small">We use a high percentage of natural
+                                    absolutes and essential oils, blended with safe, sustainable synthetics where nature
+                                    cannot be harvested ethically (e.g., musk, sandalwood).</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-light py-5 text-center">
+        <div class="container">
+            <h2 class="mb-3">Not sure where to start?</h2>
+            <p class="text-muted mb-4">Contact us for a free 15-minute phone consultation.</p>
+            <a href="contact.html" class="btn btn-primary-custom">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="h4 mb-4 text-white font-heading">Perfume Atelier</h3>
+                    <p class="text-white-50 small mb-4">A sanctuary of scent, dedicated to the art of fine fragrance and
+                        personal expression.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Discover</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none small">Maison</a></li>
+                        <li class="mb-2"><a href="home-2.html" class="text-decoration-none small">Story</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none small">Atelier</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none small">Experiences</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Connect</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="pricing.html" class="text-decoration-none small">Reserve</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-decoration-none small">Journal</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none small">Visit</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none small">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Newsletter</h5>
+                    <form action="#" class="d-flex gap-2">
+                        <input type="email" class="form-control form-control-sm border-0" placeholder="Email Address">
+                        <button class="btn btn-primary-custom btn-sm" type="button">Join</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary my-4 opacity-25">
+            <div class="text-center text-white-50 small">&copy; 2026 Perfume Atelier. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
