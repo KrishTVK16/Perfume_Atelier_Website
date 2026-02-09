@@ -1,0 +1,676 @@
+/* 
+ * Perfume Atelier - Main Stylesheet
+ * Theme: Luxury, Artisanal, Minimal
+ * Palette: Powder Blush (#D97C96), Deep Burgundy (#5A2F3C), Darkest Brown (#2F151D)
+ */
+
+:root {
+    /* --- Color Palette --- */
+    --primary-color: #D97C96;
+    /* Powder Blush - Accents, Highlights */
+    --secondary-color: #5A2F3C;
+    /* Deep Burgundy - Headings, Heavy UI */
+    --tertiary-color: #2F151D;
+    /* Darkest Brown - Text, Backgrounds */
+
+    /* --- Functional Colors --- */
+    --body-bg: #FAF9F6;
+    /* Ivory / Off-White */
+    --body-text: #2F151D;
+    /* Darkest Brown for text */
+    --light-text: #FAF9F6;
+    /* Off-white for text on dark backgrounds */
+    --border-color: rgba(90, 47, 60, 0.1);
+    /* Subtle Burgundy border */
+
+    /* --- Typography --- */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-sketch: 'Architects Daughter', cursive;
+    /* Buxton Sketch Alternative */
+
+    /* --- Spacing & UI --- */
+    --header-height: 80px;
+    --border-radius: 4px;
+    /* Slight rounding for elegant feel */
+    --transition-speed: 0.3s;
+}
+
+[data-theme="dark"] {
+    --body-bg: #1a0e12;
+    /* Very dark reddish-brown */
+    --body-text: #FAF9F6;
+    /* Ivory text */
+    --border-color: rgba(217, 124, 150, 0.2);
+    --tertiary-color: #FAF9F6;
+    /* Invert tertiary for some uses if needed */
+}
+
+/* --- Global Reset & Typography --- */
+body {
+    font-family: var(--font-body);
+    background-color: var(--body-bg);
+    color: var(--body-text);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    /* Headings in Deep Burgundy */
+    font-weight: 600;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: var(--primary-color);
+    /* Headings in Blush for Dark Mode */
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] a {
+    color: #D97C96;
+}
+
+[data-theme="dark"] a:hover {
+    color: #fff;
+}
+
+/* --- Buttons --- */
+.btn-primary-custom {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: 1px solid var(--secondary-color);
+    padding: 10px 24px;
+    border-radius: var(--border-radius);
+    font-family: var(--font-body);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+    /* Ensure visibility */
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    padding: 10px 24px;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+[data-theme="dark"] .btn-outline-custom {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-outline-custom:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* --- Header & Nav --- */
+.navbar-custom {
+    background-color: var(--body-bg);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* --- Hero Gradients --- */
+.hero-gradient {
+    background-image: linear-gradient(to right, rgba(250, 249, 246, 0.9), rgba(250, 249, 246, 0.95));
+}
+
+[data-theme="dark"] .hero-gradient {
+    background-image: linear-gradient(to right, rgba(26, 14, 18, 0.95), rgba(47, 21, 29, 0.95));
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Fix Toggler Visibility */
+.navbar-toggler {
+    border-color: var(--secondary-color);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(90, 47, 60, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Offcanvas Styling */
+.offcanvas {
+    background-color: var(--body-bg);
+    color: var(--body-text);
+}
+
+.offcanvas-header .btn-close {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%235A2F3C'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+    opacity: 0.8;
+}
+
+/* --- Brand / Logo --- */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo-icon {
+    width: 40px;
+    height: 40px;
+    /* Background removed for image logo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.brand-text-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.navbar-brand-text {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 2px;
+}
+
+.brand-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+
+
+[data-theme="dark"] .navbar-brand-text {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .brand-subtitle {
+    color: #fff;
+    opacity: 0.8;
+}
+
+[data-theme="dark"] .brand-text {
+    color: #FAF9F6 !important;
+    /* Ensure logo text is white in dark mode */
+}
+
+.nav-link-custom {
+    color: var(--body-text);
+    font-weight: 500;
+    margin-left: 1rem;
+    position: relative;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+    color: var(--primary-color);
+    text-shadow: 0 0 15px rgba(217, 124, 150, 0.4);
+    /* Soft blush glow */
+}
+
+.nav-link-custom.active::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 1rem;
+    /* Match margin-left of text */
+    right: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    width: calc(100% - 1rem);
+    /* Adjust width to match text */
+    box-shadow: 0 0 10px rgba(217, 124, 150, 0.6);
+    /* Glow on the underline */
+}
+
+[data-theme="dark"] .nav-link-custom.active {
+    color: var(--primary-color) !important;
+    /* Active menu color for dark mode */
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(217, 124, 150, 0.8);
+    /* Stronger glow in dark mode */
+}
+
+/* --- Footer --- */
+.footer-custom {
+    background-color: var(--tertiary-color);
+    /* Very dark background */
+    color: #FAF9F6;
+    padding: 4rem 0 2rem;
+}
+
+.footer-custom h5 {
+    color: var(--primary-color);
+    font-family: var(--font-body);
+    /* Subtle label style */
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    transition: color var(--transition-speed);
+}
+
+.footer-custom h5:hover {
+    color: #fff;
+}
+
+.footer-custom a {
+    color: rgba(250, 249, 246, 0.7);
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.footer-custom a:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Social media icons specific hover effects */
+.footer-custom .bi {
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.footer-custom .bi:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.2);
+}
+
+[data-theme="dark"] .footer-custom {
+    color: #FAF9F6 !important;
+    /* Force white text in footer for dark mode */
+    background-color: #150a0d !important;
+    /* Even darker background for contrast */
+}
+
+[data-theme="dark"] .footer-custom a {
+    color: rgba(250, 249, 246, 0.8) !important;
+}
+
+[data-theme="dark"] .footer-custom h5 {
+    color: var(--primary-color) !important;
+}
+
+/* --- Utility / Decor --- */
+.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary-custom {
+    color: var(--secondary-color) !important;
+}
+
+.font-sketch {
+    font-family: var(--font-sketch);
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.font-body {
+    font-family: var(--font-body);
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+/* --- Cards --- */
+.card-custom {
+    background: var(--body-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(90, 47, 60, 0.1);
+}
+
+.location-card {
+    transition: all 0.4s ease;
+    border: 1px solid transparent;
+}
+
+.location-card:hover {
+    background-color: var(--body-bg);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 40px rgba(217, 124, 150, 0.15);
+    /* Blush glow shadow */
+    transform: translateY(-5px) scale(1.02);
+}
+
+.location-card:hover .text-primary-custom {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* --- Service Images --- */
+.service-img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blog-img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* --- Dashboard Specifics --- */
+.sidebar {
+    background-color: var(--tertiary-color);
+    color: #fff;
+    min-height: 100vh;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+/* --- Dark Mode Utility Overrides --- */
+[data-theme="dark"] .text-secondary-custom {
+    color: var(--primary-color) !important;
+}
+
+[data-theme="dark"] .text-muted {
+    color: rgba(250, 249, 246, 0.6) !important;
+}
+
+[data-theme="dark"] .bg-light {
+    background-color: #2F151D !important;
+    /* Tertiary color for contrast */
+}
+
+[data-theme="dark"] .bg-white {
+    background-color: var(--body-bg) !important;
+    border: 1px solid var(--border-color);
+    /* Add border since white usually has shadow or distinction */
+}
+
+[data-theme="dark"] .shadow-sm,
+[data-theme="dark"] .shadow,
+[data-theme="dark"] .shadow-lg {
+    box-shadow: none !important;
+    /* Shadows look bad/invisible on dark, clean them up */
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .border-light {
+    border-color: var(--border-color) !important;
+}
+
+/* --- Dark Mode Mobile Icons --- */
+[data-theme="dark"] .navbar-toggler {
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(217, 124, 150, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+[data-theme="dark"] .btn-close {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D97C96'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+    opacity: 1;
+}
+
+/* --- Pricing Page Dark Mode --- */
+[data-theme="dark"] .card-custom {
+    background-color: var(--body-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--body-text) !important;
+}
+
+[data-theme="dark"] .card-custom.border {
+    border: 1px solid var(--border-color) !important;
+}
+
+[data-theme="dark"] .card-custom.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .badge.bg-secondary {
+    background-color: var(--primary-color) !important;
+}
+
+[data-theme="dark"] .transform-scale:hover {
+    transform: translateY(-5px) !important;
+}
+
+[data-theme="dark"] .text-secondary-custom {
+    color: var(--primary-color) !important;
+}
+
+[data-theme="dark"] .btn-outline-custom {
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}
+
+[data-theme="dark"] .btn-outline-custom:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--body-bg) !important;
+}
+
+[data-theme="dark"] .btn-primary-custom {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--body-bg) !important;
+}
+
+[data-theme="dark"] .btn-primary-custom:hover {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: var(--body-bg) !important;
+}
+
+[data-theme="dark"] .btn-outline-light:hover {
+    color: #000 !important;
+}
+
+[data-theme="dark"] .hero-split p.lead.text-muted {
+    color: var(--body-text) !important;
+    opacity: 1 !important;
+}
+
+/* --- Dropdown Menu Theme Colors --- */
+.dropdown-menu {
+    background-color: var(--body-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.dropdown-item {
+    color: var(--body-text) !important;
+    transition: all 0.3s ease !important;
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--body-bg) !important;
+}
+
+.dropdown-item.active {
+    background-color: var(--primary-color) !important;
+    color: var(--body-bg) !important;
+}
+
+.dropdown-item.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+
+.dropdown-item.text-primary-custom:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--body-bg) !important;
+}
+
+/* --- Login/Register Pages Dark Mode --- */
+[data-theme="dark"] body.bg-light {
+    background-color: var(--body-bg) !important;
+}
+
+[data-theme="dark"] .bg-body {
+    background-color: var(--body-bg) !important;
+    color: var(--body-text) !important;
+}
+
+[data-theme="dark"] .card-custom {
+    background-color: var(--body-bg) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+[data-theme="dark"] .form-control {
+    background-color: var(--body-bg) !important;
+    border-color: var(--border-color) !important;
+    color: var(--body-text) !important;
+}
+
+[data-theme="dark"] .form-control:focus {
+    background-color: var(--body-bg) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--body-text) !important;
+}
+
+[data-theme="dark"] .form-label {
+    color: var(--body-text) !important;
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: rgba(250, 249, 246, 0.5) !important;
+    opacity: 1;
+}
+
+[data-theme="dark"] .text-muted {
+    color: rgba(250, 249, 246, 0.6) !important;
+}
+
+[data-theme="dark"] .navbar-brand-text {
+    color: var(--primary-color) !important;
+}
+
+[data-theme="dark"] .brand-subtitle {
+    color: #fff !important;
+}
+
+/* --- Olfactory Families Section Dark Mode --- */
+[data-theme="dark"] section[style*="background: linear-gradient"] {
+    background: linear-gradient(to bottom, #2F151D, #1a0e12) !important;
+}
+
+[data-theme="dark"] .card-custom {
+    background-color: var(--body-bg) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* --- Testimonials Section Dark Mode --- */
+[data-theme="dark"] .section-padding:not([style*="background"]) {
+    background-color: var(--body-bg) !important;
+}
+
+[data-theme="dark"] .section-padding:not([style*="background"]) .card-custom {
+    background-color: var(--body-bg) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+[data-theme="dark"] .section-padding:not([style*="background"]) .text-muted {
+    color: rgba(250, 249, 246, 0.6) !important;
+}
+
+[data-theme="dark"] .section-padding:not([style*="background"]) h2 {
+    color: var(--primary-color) !important;
+}
+
+[data-theme="dark"] .section-padding:not([style*="background"]) h6 {
+    color: #FAF9F6 !important;
+}
+
+[data-theme="dark"] .section-padding:not([style*="background"]) small {
+    color: rgba(250, 249, 246, 0.7) !important;
+}
+
+/* Testimonial quote text in dark mode */
+[data-theme="dark"] .section-padding:not([style*="background"]) p {
+    color: rgba(250, 249, 246, 0.9) !important;
+}
+
+[data-theme="dark"] .section-padding:not([style*="background"]) p.fst-italic {
+    color: rgba(250, 249, 246, 0.85) !important;
+}
+
+/* Star ratings in dark mode */
+[data-theme="dark"] .section-padding:not([style*="background"]) .text-warning {
+    color: #ffc107 !important;
+}
+
+/* --- Testimonials Section Centering --- */
+.section-padding:not([style*="background"]) {
+    text-align: center !important;
+}
+
+.section-padding:not([style*="background"]) .row {
+    justify-content: center !important;
+}
+
+.section-padding:not([style*="background"]) .card-custom {
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+.section-padding:not([style*="background"]) .d-flex {
+    justify-content: center !important;
+}

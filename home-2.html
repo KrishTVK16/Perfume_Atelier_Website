@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story | Perfume Atelier</title>
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <!-- Theme Persistence Script (runs immediately) -->
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Home 2 Specific Editorial Styles */
+        .hero-split {
+            min-height: 90vh;
+        }
+
+        .hero-img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Global Header (Same as others) -->
+    <!-- Global Header -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <!-- Logo + Title + Subtitle -->
+            <a class="navbar-brand" href="index.html">
+                <div class="brand-logo-icon">
+                    <img src="assets/logo.png" alt="Perfume Atelier Logo">
+                </div>
+                <div class="brand-text-group">
+                    <span class="navbar-brand-text">Perfume</span>
+                    <span class="brand-subtitle">Atelier</span>
+                </div>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links (Offcanvas for mobile) -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title font-heading" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-custom active" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                                <li><a class="dropdown-item active text-primary-custom" href="home-2.html">Home 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">Atelier</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Experiences</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="pricing.html">Reserve</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Journal</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Visit</a></li>
+                    </ul>
+
+                    <!-- Right Side: Auth, Theme, Dashboard -->
+                    <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                        <!-- Theme Toggle -->
+                        <button id="theme-toggle" class="btn btn-link text-secondary-custom p-1 text-decoration-none"
+                            title="Toggle Theme">
+                            <i class="bi bi-moon-stars-fill fs-5"></i>
+                        </button>
+
+                        <div class="vr mx-2 d-none d-lg-block text-secondary-custom"></div>
+
+                        <a href="login.html" class="btn btn-outline-custom btn-sm">Log In</a>
+                        <a href="register.html" class="btn btn-primary-custom btn-sm">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Editorial Hero -->
+    <section class="container-fluid p-0 hero-split d-flex align-items-center position-relative">
+        <div class="row g-0 w-100 h-100">
+            <div class="col-lg-6 order-lg-2 h-100 position-relative">
+                <img src="assets/images/hero-editorial.png" alt="Hero" class="img-fluid w-100 h-100 object-fit-cover">
+            </div>
+            <div class="col-lg-6 order-lg-1 d-flex flex-column justify-content-center p-5 bg-body text-center text-lg-start">
+                <div class="p-lg-5 mt-5 mt-lg-0">
+                    <span class="text-primary-custom fw-bold font-sketch fs-4 mb-3 d-block">The Art of the Unseen</span>
+                    <h1 class="display-1 font-heading mb-4" style="font-weight: 700;">
+                        Minimalist.<br>Bespoke.<br>Timeless.</h1>
+                    <p class="lead text-muted mb-5 mx-auto" style="max-width: 450px;">We craft fragrances for those who speak
+                        without words. An olfactory signature designed solely for you.</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <a href="services.html" class="btn btn-primary-custom rounded-pill px-5 py-3">Start Your Journey</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative Fixed Element -->
+        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 d-none d-lg-block">
+            <a href="#content" class="text-secondary-custom"><i class="bi bi-arrow-down-circle fs-2"></i></a>
+        </div>
+    </section>
+
+    <!-- Manifest Section -->
+    <section id="content" class="section-padding" style="background: linear-gradient(to bottom, #FAF9F6, #f4e4e9);">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <img src="https://placehold.co/100x100/D97C96/fff?text=Logo" width="80" class="rounded-circle mb-4"
+                        alt="Icon">
+                    <h2 class="display-5 font-heading mb-5">"Scent is the most intense form of memory."</h2>
+                    <p class="text-muted lead">We do not mass produce. We do not follow trends. We listen to the
+                        ingredients, and we listen to you. Our studio is a place of slow creation, where time is the
+                        most essential raw material.</p>
+                    <div class="mt-5">
+                        <img src="https://placehold.co/200x80/FAF9F6/5A2F3C?text=Signature" alt="Signature"
+                            class="opacity-50">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Masterpiece Spotlight (New Section) -->
+    <section class="section-padding py-0">
+        <div class="container-fluid p-0">
+            <div class="row g-0 align-items-center text-white"
+                style="background: linear-gradient(135deg, #1a1a1a 0%, #2F151D 100%);">
+                <div class="col-lg-6">
+                    <img src="assets/images/masterpiece-gold.png" class="img-fluid w-100" alt="Masterpiece">
+                </div>
+                <div class="col-lg-6 p-5">
+                    <div class="p-lg-5">
+                        <span class="text-primary-custom text-uppercase letter-spacing-1 small mb-3 d-block">The
+                            Masterpiece</span>
+                        <h2 class="display-3 font-heading mb-4 text-white">L'Heure D'Or</h2>
+                        <p class="lead text-white-50 mb-4">"The Golden Hour." A fragrance capturing the fleeting moment
+                            when the sun kisses the horizon.</p>
+                        <div class="row g-4 mb-5">
+                            <div class="col-4 border-start border-secondary ps-3">
+                                <span class="d-block text-white-50 small text-uppercase">Top</span>
+                                <span class="d-block">Bergamot</span>
+                            </div>
+                            <div class="col-4 border-start border-secondary ps-3">
+                                <span class="d-block text-white-50 small text-uppercase">Heart</span>
+                                <span class="d-block">Iris Absolu</span>
+                            </div>
+                            <div class="col-4 border-start border-secondary ps-3">
+                                <span class="d-block text-white-50 small text-uppercase">Base</span>
+                                <span class="d-block">Suede</span>
+                            </div>
+                        </div>
+                        <a href="contact.html?product=LHeureDor" class="btn btn-outline-light px-4">Inquire for
+                            Bottle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tiled Services (Masonry-ish) -->
+    <section class="section-padding pb-0">
+        <div class="container-fluid px-0">
+            <div class="row g-0">
+                <div class="col-md-6 position-relative group-hover-trigger">
+                    <img src="https://placehold.co/900x600/2F151D/fff?text=Besoke+Creation"
+                        class="w-100 object-fit-cover" style="height: 600px;" alt="...">
+                    <div
+                        class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-25 d-flex align-items-center justify-content-center hover-overlay transition">
+                        <div class="text-center text-white p-5">
+                            <div class="mb-4">
+                                <h3 class="display-4 font-sketch mb-0">Bespoke</h3>
+                            </div>
+                            
+                            <div>
+                                <a href="service-details.html" style="margin-top: 10%;" class="btn btn-outline-light rounded-pill px-4 py-2">View
+                                    Process</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 position-relative group-hover-trigger">
+                    <img src="https://placehold.co/900x600/5A2F3C/D97C96?text=Private+Collection"
+                        class="w-100 object-fit-cover" style="height: 600px;" alt="...">
+                    <div
+                        class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-25 d-flex align-items-center justify-content-center hover-overlay transition">
+                        <div class="text-center text-white p-5">
+                            <div class="mb-4">
+                                <h3 class="display-4 font-sketch mb-0">Collection</h3>
+                            </div>
+                           
+                            <div>
+                                <a href="services.html" class="btn btn-outline-light rounded-pill px-4 py-2">Explore
+                                    Scents</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Raw Materials (New Section) -->
+    <section class="section-padding bg-custom-soft">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 font-heading mb-3">Purest Raw Materials</h2>
+                <div class="mx-auto" style="width: 50px; height: 2px; background-color: var(--secondary-color);"></div>
+                <p class="text-muted mt-3 mx-auto" style="max-width: 500px;">We source our essences from the world's
+                    most exclusive growers, ensuring uncompromising quality.</p>
+            </div>
+
+            <div class="row g-4 text-center">
+                <!-- Material 1 -->
+                <div class="col-md-4">
+                    <img src="https://placehold.co/200x200/D97C96/fff?text=Iris" class="rounded-circle mb-3 shadow-sm"
+                        width="180" height="180" alt="Iris">
+                    <h5 class="font-heading mt-3">Florentine Iris</h5>
+                    <p class="text-muted small px-4">Harvested only once every three years, adding a powdery, velvety
+                        elegance.</p>
+                </div>
+                <!-- Material 2 -->
+                <div class="col-md-4">
+                    <img src="https://placehold.co/200x200/5A2F3C/fff?text=Oud" class="rounded-circle mb-3 shadow-sm"
+                        width="180" height="180" alt="Oud">
+                    <h5 class="font-heading mt-3">Cambodian Oud</h5>
+                    <p class="text-muted small px-4">Sustainably sourced Agarwood, providing a deep, resinous, and
+                        spiritual depth.</p>
+                </div>
+                <!-- Material 3 -->
+                <div class="col-md-4">
+                    <img src="https://placehold.co/200x200/2F151D/fff?text=Jasmine"
+                        class="rounded-circle mb-3 shadow-sm" width="180" height="180" alt="Jasmine">
+                    <h5 class="font-heading mt-3">Jasmine Sambac</h5>
+                    <p class="text-muted small px-4">Hand-picked at dawn to capture the most intense, narcotic floral
+                        notes.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="about.html" class="btn btn-outline-custom">Read Our Sourcing Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journal Preview (Minimal) -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <h2 class="font-heading mb-0">From the Journal</h2>
+                <a href="blog.html" class="text-secondary-custom text-decoration-none">View All <i
+                        class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="blog-details.html" class="text-decoration-none">
+                        <div class="card-img-wrapper overflow-hidden">
+                            <img src="assets/images/collection-flora.png" class="card-img-top" alt="Flora">
+                        </div>
+                        <span class="text-uppercase small text-muted letter-spacing-1">Process</span>
+                        <h4 class="font-heading text-secondary-custom mt-2">Harvesting Dawn Roses</h4>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="blog-details.html" class="text-decoration-none">
+                        <div class="card-img-wrapper overflow-hidden">
+                            <img src="assets/images/product-9.png" class="card-img-top" alt="Experimental">
+                        </div>
+                        <span class="text-uppercase small text-muted letter-spacing-1">Ingredients</span>
+                        <h4 class="font-heading text-secondary-custom mt-2">The Mystery of Oud</h4>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="blog-details.html" class="text-decoration-none">
+                        <div class="card-img-wrapper overflow-hidden">
+                            <img src="assets/images/product-5.png" class="card-img-top" alt="Noir">
+                        </div>
+                        <span class="text-uppercase small text-muted letter-spacing-1">Studio</span>
+                        <h4 class="font-heading text-secondary-custom mt-2">Inside the Lab</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="brand-logo-icon" style="width: 48px; height: 48px;">
+                            <img src="assets/logo.png" alt="Perfume Atelier Logo">
+                        </div>
+                        <div class="brand-text-group">
+                            <span class="navbar-brand-text">Perfume</span>
+                            <span class="brand-subtitle">Atelier</span>
+                        </div>
+                    </div>
+                    <p class="text-white-50 small mb-4">A sanctuary of scent, dedicated to the art of fine fragrance and
+                        personal expression. Handcrafted in our studio.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-twitter fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Discover</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none small">Maison</a></li>
+                        <li class="mb-2"><a href="home-2.html" class="text-decoration-none small">Story</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none small">Atelier</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none small">Experiences</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Connect</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="pricing.html" class="text-decoration-none small">Reserve</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-decoration-none small">Journal</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none small">Visit</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none small">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Newsletter</h5>
+                    <p class="text-white-50 small mb-3">Subscribe for exclusive scents and workshop invites.</p>
+                    <form action="#" class="d-flex gap-2">
+                        <input type="email" class="form-control form-control-sm border-0" placeholder="Email Address">
+                        <button class="btn btn-primary-custom btn-sm" type="button">Join</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary my-4 opacity-25">
+            <div class="text-center text-white-50 small">&copy; 2026 Perfume Atelier. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
