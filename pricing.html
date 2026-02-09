@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserve (Pricing) | Perfume Atelier</title>
     <link rel="icon" href="assets/logo.png" type="image/png">
+    <!-- Theme Persistence Script (runs immediately) -->
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,8 +53,16 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Maison</a></li>
-                        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Story</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-custom dropdown-toggle" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">Atelier</a></li>
                         <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Experiences</a>
                         </li>
@@ -80,12 +95,12 @@
     <!-- Pricing Tables -->
     <section class="section-padding">
         <div class="container">
-            <div class="row g-4 align-items-center">
+            <div class="row g-4 align-items-stretch">
 
                 <!-- Discovery Tier -->
-                <div class="col-lg-4">
-                    <div class="card card-custom h-100 p-4 border-0">
-                        <div class="card-body text-center">
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-4 border-0 d-flex flex-column">
+                        <div class="card-body text-center flex-grow-1 d-flex flex-column">
                             <h4 class="font-heading mb-3">Discovery</h4>
                             <div class="display-4 fw-bold text-secondary-custom mb-2">$85</div>
                             <p class="text-muted small mb-4">Per Person</p>
@@ -97,18 +112,21 @@
                                 <li class="mb-2"><i class="bi bi-check2 text-primary-custom me-2"></i> 10ml Travel Spray
                                 </li>
                             </ul>
-                            <a href="contact.html" class="btn btn-outline-custom w-100">Book Now</a>
+                            <div class="mt-auto">
+                                <a href="contact.html" class="btn btn-outline-custom w-100">Book Now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Signature Tier (Highlighted) -->
-                <div class="col-lg-4">
-                    <div class="card card-custom h-100 p-5 border shadow-lg transform-scale position-relative">
+                <div class="col-md-4">
+                    <div
+                        class="card card-custom h-100 pt-5 px-5 pb-4 border shadow-lg transform-scale position-relative d-flex flex-column">
                         <span
                             class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary text-white px-3 py-2">Most
                             Popular</span>
-                        <div class="card-body text-center">
+                        <div class="card-body text-center flex-grow-1 d-flex flex-column">
                             <h4 class="font-heading mb-3 text-primary-custom">Signature Bespoke</h4>
                             <div class="display-4 fw-bold text-secondary-custom mb-2">$250</div>
                             <p class="text-muted small mb-4">Per Person</p>
@@ -124,15 +142,17 @@
                                 <li class="mb-2"><i class="bi bi-check2-all text-primary-custom me-2"></i> Champagne
                                     Service</li>
                             </ul>
-                            <a href="contact.html" class="btn btn-primary-custom w-100 btn-lg">Book Experience</a>
+                            <div class="mt-auto">
+                                <a href="contact.html" class="btn btn-primary-custom w-100">Book Experience</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Atelier Tier -->
-                <div class="col-lg-4">
-                    <div class="card card-custom h-100 p-4 border-0">
-                        <div class="card-body text-center">
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-4 border-0 d-flex flex-column">
+                        <div class="card-body text-center flex-grow-1 d-flex flex-column">
                             <h4 class="font-heading mb-3">Master Class</h4>
                             <div class="display-4 fw-bold text-secondary-custom mb-2">$450</div>
                             <p class="text-muted small mb-4">Per Couple</p>
@@ -146,7 +166,9 @@
                                 <li class="mb-2"><i class="bi bi-check2 text-primary-custom me-2"></i> Leather Travel
                                     Cases</li>
                             </ul>
-                            <a href="contact.html" class="btn btn-outline-custom w-100">Book Now</a>
+                            <div class="mt-auto">
+                                <a href="contact.html" class="btn btn-outline-custom w-100">Book Now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -164,13 +186,18 @@
                         <div class="brand-logo-icon" style="width: 48px; height: 48px;">
                             <img src="assets/logo.png" alt="Perfume Atelier Logo">
                         </div>
-                        <div class="d-flex flex-column lh-1">
-                            <span class="font-heading fw-bold fs-4 text-white">Perfume</span>
-                            <span class="text-uppercase small text-white-50 ls-2">Atelier</span>
+                        <div class="brand-text-group">
+                            <span class="navbar-brand-text">Perfume</span>
+                            <span class="brand-subtitle">Atelier</span>
                         </div>
                     </div>
                     <p class="text-white-50 small mb-4">A sanctuary of scent, dedicated to the art of fine fragrance and
                         personal expression.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-twitter fs-5"></i></a>
+                    </div>
                 </div>
                 <!-- ... (Simplified Footer) ... -->
                 <div class="col-lg-2 col-md-6">
