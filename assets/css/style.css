@@ -224,7 +224,15 @@ a:hover {
     font-weight: 500;
 }
 
+<<<<<<< HEAD
 
+=======
+/* [data-theme="dark"] .brand-logo-icon {} */
+[data-theme="dark"] .navbar-brand img {
+    filter: invert(1) brightness(100%);
+    /* Invert black logo to white for dark mode */
+}
+>>>>>>> 38f600f6d2a284111104dd6d08569fb2435339cc
 
 [data-theme="dark"] .navbar-brand-text {
     color: var(--primary-color);
@@ -293,20 +301,27 @@ a:hover {
     font-size: 0.9rem;
     letter-spacing: 1px;
     margin-bottom: 1.5rem;
+<<<<<<< HEAD
     transition: color var(--transition-speed);
 }
 
 .footer-custom h5:hover {
     color: #fff;
+=======
+>>>>>>> 38f600f6d2a284111104dd6d08569fb2435339cc
 }
 
 .footer-custom a {
     color: rgba(250, 249, 246, 0.7);
+<<<<<<< HEAD
     transition: color var(--transition-speed), transform var(--transition-speed);
+=======
+>>>>>>> 38f600f6d2a284111104dd6d08569fb2435339cc
 }
 
 .footer-custom a:hover {
     color: var(--primary-color);
+<<<<<<< HEAD
     transform: translateY(-2px);
 }
 
@@ -318,6 +333,8 @@ a:hover {
 .footer-custom .bi:hover {
     color: var(--primary-color) !important;
     transform: scale(1.2);
+=======
+>>>>>>> 38f600f6d2a284111104dd6d08569fb2435339cc
 }
 
 [data-theme="dark"] .footer-custom {
@@ -391,6 +408,7 @@ a:hover {
     transition: transform 0.3s ease;
 }
 
+<<<<<<< HEAD
 /* --- Service Images --- */
 .service-img {
     height: 250px;
@@ -404,6 +422,8 @@ a:hover {
     width: 100%;
 }
 
+=======
+>>>>>>> 38f600f6d2a284111104dd6d08569fb2435339cc
 /* --- Dashboard Specifics --- */
 .sidebar {
     background-color: var(--tertiary-color);
@@ -468,6 +488,7 @@ a:hover {
 [data-theme="dark"] .btn-close {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D97C96'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
     opacity: 1;
+<<<<<<< HEAD
 }
 
 /* --- Pricing Page Dark Mode --- */
@@ -673,4 +694,6 @@ a:hover {
 
 .section-padding:not([style*="background"]) .d-flex {
     justify-content: center !important;
+=======
+>>>>>>> 38f600f6d2a284111104dd6d08569fb2435339cc
 }
