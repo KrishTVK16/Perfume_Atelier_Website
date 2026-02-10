@@ -279,16 +279,28 @@ a:hover {
 
 /* --- Footer --- */
 .footer-custom {
-    background-color: var(--tertiary-color);
-    /* Very dark background */
-    color: #FAF9F6;
+    background-color: #f4e4e9;
+    /* Light blush background for light mode */
+    color: #2F151D;
     padding: 4rem 0 2rem;
 }
 
+/* Footer paragraph text visibility */
+.footer-custom p {
+    color: #2F151D !important;
+    /* Dark text for paragraphs */
+}
+
+/* Footer copyright text visibility */
+.footer-custom .text-white-50 {
+    color: #2F151D !important;
+    /* Dark text for copyright and other elements */
+}
+
 .footer-custom h5 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
+    /* Dark burgundy for headings */
     font-family: var(--font-body);
-    /* Subtle label style */
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 1px;
@@ -297,11 +309,12 @@ a:hover {
 }
 
 .footer-custom h5:hover {
-    color: #fff;
+    color: var(--primary-color);
 }
 
 .footer-custom a {
-    color: rgba(250, 249, 246, 0.7);
+    color: var(--secondary-color);
+    /* Dark burgundy for links */
     transition: color var(--transition-speed), transform var(--transition-speed);
 }
 
@@ -312,6 +325,8 @@ a:hover {
 
 /* Social media icons specific hover effects */
 .footer-custom .bi {
+    color: var(--secondary-color);
+    /* Dark burgundy for icons */
     transition: color var(--transition-speed), transform var(--transition-speed);
 }
 
@@ -327,12 +342,80 @@ a:hover {
     /* Even darker background for contrast */
 }
 
+/* Dark mode footer paragraph text */
+[data-theme="dark"] .footer-custom p {
+    color: #FAF9F6 !important;
+    /* White text for paragraphs in dark mode */
+}
+
+/* Dark mode footer copyright and social icons */
+[data-theme="dark"] .footer-custom .text-white-50 {
+    color: rgba(250, 249, 246, 0.8) !important;
+    /* Semi-transparent white for copyright in dark mode */
+}
+
+/* Dark mode social media icons */
+[data-theme="dark"] .footer-custom .bi {
+    color: rgba(250, 249, 246, 0.8) !important;
+    /* Semi-transparent white for social icons in dark mode */
+}
+
+[data-theme="dark"] .footer-custom .bi:hover {
+    color: var(--primary-color) !important;
+    /* Blush color on hover in dark mode */
+}
+
+/* Our Philosophy section cards - box shadow in light mode */
+.bg-light.border.border-light.rounded {
+    box-shadow: 0 4px 12px rgba(90, 47, 60, 0.08);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.bg-light.border.border-light.rounded:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(90, 47, 60, 0.15);
+}
+
+/* Meet the Nose section card - enhanced box shadow */
+.bg-light .card-custom.border-0.bg-transparent {
+    box-shadow: 0 8px 25px rgba(90, 47, 60, 0.12);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.bg-light .card-custom.border-0.bg-transparent:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(90, 47, 60, 0.2);
+}
+
 [data-theme="dark"] .footer-custom a {
     color: rgba(250, 249, 246, 0.8) !important;
 }
 
 [data-theme="dark"] .footer-custom h5 {
     color: var(--primary-color) !important;
+}
+
+/* Dark mode FAQ section visibility */
+[data-theme="dark"] .accordion-body {
+    color: var(--body-text) !important;
+    /* Use body text color for FAQ answers in dark mode */
+}
+
+[data-theme="dark"] .accordion-button {
+    color: var(--body-text) !important;
+    background-color: transparent !important;
+    /* Dark text for FAQ questions in dark mode */
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+    color: var(--primary-color) !important;
+    background-color: rgba(217, 124, 150, 0.1) !important;
+    /* Highlight active FAQ items in dark mode */
+}
+
+[data-theme="dark"] .accordion-item {
+    background-color: transparent !important;
+    border-color: var(--border-color) !important;
 }
 
 /* --- Utility / Decor --- */
@@ -366,11 +449,14 @@ a:hover {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: 0 4px 12px rgba(90, 47, 60, 0.08);
+    /* Subtle box shadow for light mode */
 }
 
 .card-custom:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(90, 47, 60, 0.1);
+    box-shadow: 0 15px 35px rgba(90, 47, 60, 0.15);
+    /* Enhanced shadow on hover */
 }
 
 .location-card {
@@ -557,6 +643,28 @@ a:hover {
 .dropdown-item.text-primary-custom:hover {
     background-color: var(--primary-color) !important;
     color: var(--body-bg) !important;
+}
+
+/* Home 2 menu item specific styling - white when active */
+.dropdown-item.active.text-primary-custom {
+    color: #ffffff !important;
+}
+
+/* Enhanced Bespoke and Collection text visibility in light mode */
+.group-hover-trigger .hover-overlay {
+    background: linear-gradient(135deg, rgba(47, 21, 29, 0.8) 0%, rgba(90, 47, 60, 0.7) 100%) !important;
+}
+
+.group-hover-trigger .display-4 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+}
+
+.group-hover-trigger .btn-outline-light {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    color: #ffffff;
 }
 
 /* --- Login/Register Pages Dark Mode --- */
