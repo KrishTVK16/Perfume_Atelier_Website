@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visit (Contact) | Perfume Atelier</title>
     <link rel="icon" href="assets/logo.png" type="image/png">
+    <!-- Theme Persistence Script (runs immediately) -->
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,9 +53,16 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Maison</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-custom dropdown-toggle" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Story</a></li>
                         <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">Atelier</a></li>
                         <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Experiences</a>
                         </li>
@@ -110,8 +124,8 @@
                                 <textarea class="form-control" id="message" rows="5"
                                     placeholder="How can we help you?"></textarea>
                             </div>
-                            <div class="col-12 mt-4">
-                                <button type="submit" class="btn btn-primary-custom w-100 py-3">Send Message</button>
+                            <div class="col-12 mt-4 text-center">
+                                <button type="submit" class="btn btn-primary-custom px-5 py-3">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -233,13 +247,18 @@
                         <div class="brand-logo-icon" style="width: 48px; height: 48px;">
                             <img src="assets/logo.png" alt="Perfume Atelier Logo">
                         </div>
-                        <div class="d-flex flex-column lh-1">
-                            <span class="font-heading fw-bold fs-4 text-white">Perfume</span>
-                            <span class="text-uppercase small text-white-50 ls-2">Atelier</span>
+                        <div class="brand-text-group">
+                            <span class="navbar-brand-text">Perfume</span>
+                            <span class="brand-subtitle">Atelier</span>
                         </div>
                     </div>
                     <p class="text-white-50 small mb-4">A sanctuary of scent, dedicated to the art of fine fragrance and
                         personal expression.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-twitter fs-5"></i></a>
+                    </div>
                 </div>
                 <!-- ... (Simplified Footer) ... -->
                 <div class="col-lg-2 col-md-6">
