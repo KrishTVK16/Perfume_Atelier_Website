@@ -250,27 +250,39 @@
             <div class="row g-4 text-center">
                 <!-- Material 1 -->
                 <div class="col-md-4">
-                    <img src="https://placehold.co/200x200/D97C96/fff?text=Iris" class="rounded-circle mb-3 shadow-sm"
-                        width="180" height="180" alt="Iris">
-                    <h5 class="font-heading mt-3">Florentine Iris</h5>
-                    <p class="text-muted small px-4">Harvested only once every three years, adding a powdery, velvety
-                        elegance.</p>
+                    <div class="raw-material-card p-4 rounded-3" style="transition: all 0.3s ease; background: white;"
+                         onmouseover="this.style.boxShadow='0 15px 35px rgba(90, 47, 60, 0.15)'; this.style.transform='translateY(-5px)'"
+                         onmouseout="this.style.boxShadow='0 5px 15px rgba(90, 47, 60, 0.08)'; this.style.transform='translateY(0)'">
+                        <img src="https://placehold.co/200x200/D97C96/fff?text=Iris" class="rounded-circle mb-3"
+                            width="180" height="180" alt="Iris">
+                        <h5 class="font-heading mt-3">Florentine Iris</h5>
+                        <p class="text-muted small px-4">Harvested only once every three years, adding a powdery, velvety
+                            elegance.</p>
+                    </div>
                 </div>
                 <!-- Material 2 -->
                 <div class="col-md-4">
-                    <img src="https://placehold.co/200x200/5A2F3C/fff?text=Oud" class="rounded-circle mb-3 shadow-sm"
-                        width="180" height="180" alt="Oud">
-                    <h5 class="font-heading mt-3">Cambodian Oud</h5>
-                    <p class="text-muted small px-4">Sustainably sourced Agarwood, providing a deep, resinous, and
-                        spiritual depth.</p>
+                    <div class="raw-material-card p-4 rounded-3" style="transition: all 0.3s ease; background: white;"
+                         onmouseover="this.style.boxShadow='0 15px 35px rgba(90, 47, 60, 0.15)'; this.style.transform='translateY(-5px)'"
+                         onmouseout="this.style.boxShadow='0 5px 15px rgba(90, 47, 60, 0.08)'; this.style.transform='translateY(0)'">
+                        <img src="https://placehold.co/200x200/5A2F3C/fff?text=Oud" class="rounded-circle mb-3"
+                            width="180" height="180" alt="Oud">
+                        <h5 class="font-heading mt-3">Cambodian Oud</h5>
+                        <p class="text-muted small px-4">Sustainably sourced Agarwood, providing a deep, resinous, and
+                            spiritual depth.</p>
+                    </div>
                 </div>
                 <!-- Material 3 -->
                 <div class="col-md-4">
-                    <img src="https://placehold.co/200x200/2F151D/fff?text=Jasmine"
-                        class="rounded-circle mb-3 shadow-sm" width="180" height="180" alt="Jasmine">
-                    <h5 class="font-heading mt-3">Jasmine Sambac</h5>
-                    <p class="text-muted small px-4">Hand-picked at dawn to capture the most intense, narcotic floral
-                        notes.</p>
+                    <div class="raw-material-card p-4 rounded-3" style="transition: all 0.3s ease; background: white;"
+                         onmouseover="this.style.boxShadow='0 15px 35px rgba(90, 47, 60, 0.15)'; this.style.transform='translateY(-5px)'"
+                         onmouseout="this.style.boxShadow='0 5px 15px rgba(90, 47, 60, 0.08)'; this.style.transform='translateY(0)'">
+                        <img src="https://placehold.co/200x200/2F151D/fff?text=Jasmine"
+                            class="rounded-circle mb-3" width="180" height="180" alt="Jasmine">
+                        <h5 class="font-heading mt-3">Jasmine Sambac</h5>
+                        <p class="text-muted small px-4">Hand-picked at dawn to capture the most intense, narcotic floral
+                            notes.</p>
+                    </div>
                 </div>
             </div>
 
@@ -284,8 +296,11 @@
     <section class="section-padding">
         <div class="container">
             <div class="d-flex justify-content-between align-items-end mb-5">
-                <h2 class="font-heading mb-0">From the Journal</h2>
-                <a href="blog.html" class="text-secondary-custom text-decoration-none">View All <i
+                <h2 class="font-heading mb-0 text-center flex-grow-1">From the Journal</h2>
+                <a href="blog.html" class="text-secondary-custom text-decoration-none ms-auto" 
+                   style="transition: all 0.3s ease; display: inline-block;"
+                   onmouseover="this.style.color='var(--primary-color)'; this.style.transform='translateX(5px)'; this.style.textDecoration='underline';"
+                   onmouseout="this.style.color='var(--secondary-color)'; this.style.transform='translateX(0)'; this.style.textDecoration='none';">View All <i
                         class="bi bi-arrow-right"></i></a>
             </div>
             <div class="row g-4">
@@ -335,7 +350,7 @@
                         </div>
                     </div>
                     <p class="text-white-50 small mb-4">A sanctuary of scent, dedicated to the art of fine fragrance and
-                        personal expression. Handcrafted in our studio.</p>
+                        personal expression.</p>
                     <div class="d-flex gap-3">
                         <a href="#" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
                         <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
@@ -373,6 +388,14 @@
             <div class="text-center text-white-50 small">&copy; 2026 Perfume Atelier. All rights reserved.</div>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" 
+            class="btn btn-primary-custom position-fixed bottom-0 end-0 m-4 rounded-circle p-3 shadow-lg" 
+            style="display: none; z-index: 1000; width: 50px; height: 50px;"
+            onclick="scrollToTop()">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
