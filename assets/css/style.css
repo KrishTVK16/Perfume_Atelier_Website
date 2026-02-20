@@ -254,17 +254,15 @@ a:hover {
     /* Soft blush glow */
 }
 
-.nav-link-custom.active::after {
+.nav-link-custom.active::before {
     content: '';
     position: absolute;
     bottom: 5px;
-    left: 1rem;
-    /* Match margin-left of text */
+    left: 0;
     right: 0;
     height: 2px;
     background-color: var(--primary-color);
-    width: calc(100% - 1rem);
-    /* Adjust width to match text */
+    width: 100%;
     box-shadow: 0 0 10px rgba(217, 124, 150, 0.6);
     /* Glow on the underline */
 }
